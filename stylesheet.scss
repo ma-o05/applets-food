@@ -1,0 +1,185 @@
+@font-face {
+    font-family: 'bebas_neueregular';
+    src: url('bebasneue-regular-webfont.woff2') format('woff2'),
+         url('bebasneue-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'blenda_scriptregular';
+    src: url('blenda_script-webfont.woff2') format('woff2'),
+         url('blenda_script-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'kanitbold';
+    src: url('kanit-bold-webfont.woff2') format('woff2'),
+         url('kanit-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'kanitmedium';
+    src: url('kanit-medium-webfont.woff2') format('woff2'),
+         url('kanit-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'kanitmedium_italic';
+    src: url('kanit-mediumitalic-webfont.woff2') format('woff2'),
+         url('kanit-mediumitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+body{
+    margin: 0;
+    padding: 0;
+    *{
+        box-sizing: border-box;
+    }
+}
+img{
+    max-width: 100%;
+}
+.font-blenda_scriptregular{
+    font-family: 'blenda_scriptregular';
+}
+.font-kanitbold{
+    font-family: 'kanitbold';
+}
+.font-kanitmedium{
+    font-family: 'kanitmedium';
+}
+.font-kanitmedium_italic{
+    font-family: 'kanitmedium_italic';
+}
+.font-bebas_neueregular{
+    font-family: 'bebas_neueregular';
+}
+.flex-container{
+    display: flex;
+    flex-wrap: wrap;
+    > div{
+        position: relative;
+        flex: 0 0 auto;
+        width: 100%;
+        @media (min-width: 414px) {
+            flex: 1 0 0%;            
+        }
+    }
+}
+.image-cover-background{
+    background-image: url(pizza.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 50vh;
+    @media (min-width: 414px) {
+        flex: 1 0 0%;            
+    }
+}
+.text-container{
+    padding: 3rem;
+    @media (min-width: 414px) {
+        padding: 3rem 6rem;
+    }
+}
+div.text-content{
+    flex: 0 0 auto;
+    width: 75%;
+    @media (min-width: 414px) {
+        width: 100%;
+        flex: 0 0 auto;
+    }
+    @media (max-width: 414px) {
+        padding: 0 1rem 0;
+    }
+    .text-title{
+        line-height: 2.25rem;
+        font-size: 3rem;
+        margin: 0 0 2rem;
+        @media (min-width: 414px) {
+            line-height: 4rem;
+            font-size: 5rem;
+            margin: 0 0 2rem;
+        }
+    }
+    .text-subtitle{
+        color: #fe641e;
+        font-size: 1.4em;
+        margin: 0 0 1rem;
+        @media (min-width: 414px) {
+            font-size: 2.4em;
+            margin: 0 0 2rem;            
+        }
+    }
+    .text-description{
+        font-size: 1em;
+        @media (min-width: 414px) {
+            font-size: 1.7rem;
+        }
+    }
+    .line-wave{
+        display: block;
+        width: 100%;
+        height: auto;
+        margin-left: auto;
+        @media (min-width: 414px) {
+            width: 60%;
+        }
+    }
+}
+.price{
+    position: absolute;
+    background-color: #f92644;
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    right: -2.5rem;
+    bottom: 3rem;
+    @media (max-width: 414px) {
+        top: 95%;
+        right: 1.5rem;
+    }
+}
+.price:before{
+    content: '';
+    border: 4px solid #fff;
+    top: 1rem;
+    position: absolute;
+    left: 1rem;
+    bottom: 1rem;
+    right: 1rem;
+    border-radius: 50%;
+}
+.price p{
+    margin: 0;
+}
+.price .price-ammount{
+    font-size: 4rem;
+    line-height: 3.5rem;
+    margin-top: .14em;
+}
+div.bottom-image{
+    flex: 0 0 auto;
+    width: 25%;
+    margin-left: auto;
+    @media (min-width: 414px) {
+        width: 60%;
+        flex: 0 0 auto;
+    }
+}
+.hidde-d{
+    @media (min-width: 414px) {
+        display: none;
+    }
+}
+.hidde-m{
+    @media (max-width: 414px) {
+        display: none;
+    }
+}
