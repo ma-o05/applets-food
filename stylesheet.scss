@@ -139,11 +139,13 @@ div.text-content{
     border-radius: 50%;
     width: 150px;
     height: 150px;
-    right: -2.5rem;
+    left: -2.5rem;
     bottom: 3rem;
     @media (max-width: 414px) {
-        top: 95%;
+        top: -10%;
         right: 1.5rem;
+        left: auto;
+        z-index: 1;
     }
 }
 .price:before{
