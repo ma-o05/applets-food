@@ -79,11 +79,16 @@ img {
   background-image: url(pizza.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 50vh;
+  background-position: center;
 }
 @media (min-width: 414px) {
   .image-cover-background {
     flex: 1 0 0%;
+  }
+}
+@media (max-width: 414px) {
+  .image-cover-background {
+    min-height: 50vh;
   }
 }
 
@@ -172,6 +177,11 @@ div.text-content .line-wave {
     right: 1.5rem;
     left: auto;
     z-index: 1;
+  }
+}
+@media (min-width: 414px) and (max-width: 1080px) {
+  .price {
+    bottom: 1rem;
   }
 }
 
