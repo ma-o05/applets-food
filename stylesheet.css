@@ -60,19 +60,67 @@ img {
   font-family: "bebas_neueregular";
 }
 
+@media (orientation: landscape) {
+  .hidde-d {
+    display: none;
+  }
+}
+
+@media (orientation: portrait) {
+  .hidde-m {
+    display: none;
+  }
+}
+
 .flex-container {
   display: flex;
   flex-wrap: wrap;
+  align-items: stretch;
 }
-.flex-container > div {
+.flex-container > div:not(.price) {
   position: relative;
   flex: 0 0 auto;
   width: 100%;
 }
-@media (min-width: 414px) {
-  .flex-container > div {
+@media (orientation: landscape) {
+  .flex-container > div:not(.price) {
     flex: 1 0 0%;
   }
+  .flex-container > div:not(.price).text-container {
+    flex: 0 0 auto;
+    width: 55%;
+  }
+}
+.flex-container.text-content-wrap {
+  align-items: center;
+  height: 100%;
+  padding: 0 6vw;
+}
+@media (orientation: landscape) {
+  .flex-container.text-content-wrap > div {
+    flex: 0 0 auto;
+  }
+}
+@media (orientation: portrait) {
+  .flex-container.text-content-wrap > div {
+    flex: 1 0 0%;
+  }
+}
+.flex-container.text-content-wrap .bottom-image {
+  flex: 0 0 auto;
+  width: 25%;
+  margin-left: auto;
+}
+@media (orientation: landscape) {
+  .flex-container.text-content-wrap .bottom-image {
+    width: 50%;
+  }
+}
+
+.flex-main-container {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .image-cover-background {
@@ -81,81 +129,44 @@ img {
   background-size: cover;
   background-position: center;
 }
-@media (min-width: 414px) {
-  .image-cover-background {
-    flex: 1 0 0%;
-  }
-}
-@media (max-width: 414px) {
+@media (orientation: portrait) {
   .image-cover-background {
     min-height: 50vh;
   }
 }
 
-.text-container {
-  padding: 3rem;
-}
-@media (min-width: 414px) {
-  .text-container {
-    padding: 3rem 6rem;
-  }
-}
-
-div.text-content {
-  flex: 0 0 auto;
-  width: 75%;
-}
-@media (min-width: 414px) {
-  div.text-content {
-    width: 100%;
-    flex: 0 0 auto;
-  }
-}
-@media (max-width: 414px) {
-  div.text-content {
-    padding: 0 1rem 0;
-  }
-}
-div.text-content .text-title {
-  line-height: 2.25rem;
-  font-size: 3rem;
-  margin: 0 0 2rem;
-}
-@media (min-width: 414px) {
-  div.text-content .text-title {
-    line-height: 4rem;
-    font-size: 5rem;
-    margin: 0 0 2rem;
-  }
-}
-div.text-content .text-subtitle {
-  color: #fe641e;
-  font-size: 1.4em;
+.text-content .text-title {
+  font-size: 7vw;
+  line-height: 5.5vw;
   margin: 0 0 1rem;
 }
-@media (min-width: 414px) {
-  div.text-content .text-subtitle {
-    font-size: 2.4em;
-    margin: 0 0 2rem;
+@media (orientation: portrait) {
+  .text-content .text-title {
+    font-size: 7.5vh;
+    line-height: 6vh;
   }
 }
-div.text-content .text-description {
-  font-size: 1em;
+.text-content .text-subtitle {
+  color: #fe641e;
+  font-size: 3vw;
+  margin: 0 0 1rem;
 }
-@media (min-width: 414px) {
-  div.text-content .text-description {
-    font-size: 1.7rem;
+@media (orientation: portrait) {
+  .text-content .text-subtitle {
+    font-size: 3.5vh;
   }
 }
-div.text-content .line-wave {
-  display: block;
-  width: 100%;
-  height: auto;
-  margin-left: auto;
+.text-content .text-description {
+  font-size: 1.7vw;
 }
-@media (min-width: 414px) {
-  div.text-content .line-wave {
-    width: 60%;
+@media (orientation: portrait) {
+  .text-content .text-description {
+    font-size: 2.7vh;
+  }
+}
+@media (orientation: portrait) {
+  .text-content img {
+    width: 90%;
   }
 }
 
@@ -169,9 +180,9 @@ div.text-content .line-wave {
   width: 150px;
   height: 150px;
   left: -2.5rem;
-  bottom: 3rem;
+  bottom: 2rem;
 }
-@media (max-width: 414px) {
+@media (orientation: portrait) {
   .price {
     top: -10%;
     right: 1.5rem;
@@ -179,12 +190,6 @@ div.text-content .line-wave {
     z-index: 1;
   }
 }
-@media (min-width: 414px) and (max-width: 1080px) {
-  .price {
-    bottom: 1rem;
-  }
-}
-
 .price:before {
   content: "";
   border: 4px solid #fff;
@@ -195,38 +200,18 @@ div.text-content .line-wave {
   right: 1rem;
   border-radius: 50%;
 }
-
 .price p {
   margin: 0;
 }
-
 .price .price-ammount {
-  font-size: 4rem;
-  line-height: 3.5rem;
+  font-size: 5vw;
+  line-height: 4vw;
   margin-top: 0.14em;
 }
-
-div.bottom-image {
-  flex: 0 0 auto;
-  width: 25%;
-  margin-left: auto;
-}
-@media (min-width: 414px) {
-  div.bottom-image {
-    width: 60%;
-    flex: 0 0 auto;
-  }
-}
-
-@media (min-width: 414px) {
-  .hidde-d {
-    display: none;
-  }
-}
-
-@media (max-width: 414px) {
-  .hidde-m {
-    display: none;
+@media (orientation: portrait) {
+  .price .price-ammount {
+    font-size: 7vh;
+    line-height: 6vh;
   }
 }
 
