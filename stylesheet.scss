@@ -158,8 +158,6 @@ img{
     padding: 2rem;
     text-align: center;
     border-radius: 50%;
-    width: 150px;
-    height: 150px;
     left: -2.5rem;
     bottom: 2rem;
     @media (orientation: portrait) {
@@ -184,8 +182,9 @@ img{
     .price-ammount{
         font-size: 5vw;
         line-height: 4vw;
-        margin-top: .14em;
+        margin-top: .075em;
         @media (orientation: portrait){
+            margin-top: 0;
             font-size: 7vh;
             line-height: 6vh;
         }
