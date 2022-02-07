@@ -123,11 +123,9 @@ img {
   overflow: hidden;
 }
 
-.image-cover-background {
-  background-image: url(pizza.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+.image-cover-background img {
+  object-fit: cover;
+  height: 100%;
 }
 @media (orientation: portrait) {
   .image-cover-background {
